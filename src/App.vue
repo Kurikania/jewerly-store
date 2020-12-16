@@ -10,6 +10,7 @@
 </template>
 
 <script>
+
 import TheNavigation from "./components/TheNavigation.vue";
 import TheFooter from "./components/TheFooter.vue";
 import Shopping from "./components/Shopping.vue";

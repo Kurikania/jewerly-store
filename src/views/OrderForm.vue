@@ -128,7 +128,8 @@ export default {
   width: 100%;
   border: 1px solid rgba(#000, 0.12);
   .md-layout {
-    display: flex;    
+    display: flex; 
+    flex-direction: column;   
     margin-top: 2%;
     background-color: rgb(255, 255, 255);
     margin: auto;

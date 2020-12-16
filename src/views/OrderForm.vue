@@ -2,7 +2,7 @@
   <div >
     <GoBack />
     <div class="md-layout" id="shopping-cart">
-    <div class="md-layout-item md-medium-size-40 md-small-size-100">
+    <div class="md-layout-item  md-medium-size-40  md-small-size-80 md-xsmall-size-100">
     <md-card class="md-layout-item  md-small-size-100">
     <md-card-header>
       <div class="md-title">Your Order</div>
@@ -30,7 +30,7 @@
     </md-card-content>
     </md-card>
     </div>
-    <div class="md-layout-item md-medium-size-40 md-small-size-100">
+    <div class="md-layout-item  md-medium-size-40 md-small-size-80 md-xsmall-size-100">
      <form novalidate class="md-layout">
       <md-card class="md-layout-item  md-small-size-100">
         <md-card-header>
@@ -122,11 +122,11 @@ export default {
 
 <style lang="scss" scoped>
 #shopping-cart {
+  max-width: 800px;
+  margin: auto;
   display: flex;
   align-items:flex-start;
   justify-content: center;
-  width: 100%;
-  border: 1px solid rgba(#000, 0.12);
   .md-layout {
     display: flex; 
     flex-direction: column;   
@@ -139,17 +139,7 @@ export default {
     text-align: right;
     width: 100%;
   }
-  .shoppingBody {
-    position: fixed;   
-    padding-top: 25px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-  }
+
 
 }
 </style>

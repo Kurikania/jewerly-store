@@ -17,11 +17,12 @@
                 </slide>
             </carousel>
         </md-card-media>
-        <div class=" md-layout-item md-large-size-45 md-medium-size-45 md-xsmall-size-100">
+        <div class="md-layout-item md-large-size-45 md-medium-size-45 md-xsmall-size-100">
 
           <md-steppers >
             <md-step md-done id="first" md-label="Description">
               {{product.description}}
+              <div class="md-subheading">Price  ${{product.price}}</div>
             </md-step>
 
             <md-step id="second" md-label="Details">
@@ -84,5 +85,8 @@ export default {
   }
   .md-layout {
     justify-content: space-around;
+    .md-subheading {
+      text-align: right;
+    }
   }
 </style>

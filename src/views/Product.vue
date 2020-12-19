@@ -16,7 +16,7 @@
           <span>{{ "$" + product.price }}</span>
         </md-card-content>
          
-        <md-button class="md-primary" @click="addItem(product.id, product.price)">Add to Cart</md-button>
+        <md-button class="md-primary" @click="addItem(product.id, product.price)" v-if="product.inStock" >Add to Cart</md-button>
         <router-link :to= "{name: 'ProductDisplay', params: {slug: product.slug}}">
         <md-button class="md-primary">More Details</md-button>
         </router-link>
@@ -31,14 +31,17 @@ export default {
   name: "product",
   methods: {
     addItem(id) {
-      this.$store.dispatch("addItem", id);
+      if (this.$store.getters.products[id-1].inStock) {                
+          this.$store.dispatch("addItem", id);
+      }  
     }
   },
   computed: {
     products() {
       return this.$store.getters.products;
-    }
-  }
+    },
+      
+  }, 
 };
 </script>
 

@@ -3,7 +3,7 @@
     <div class="md-layout-item">Total {{ orderSum }}</div>
     <md-button class="md-accent md-raised" @click="showList()" id="show">{{ cartCount }}</md-button>
 
-    <div id="shoppingList" class="shoppingBody hidden" v-if="cartCount">
+    <div id="shoppingList" class="shoppingBody hidden" v-if="cartCount" >
       <div class="md-layout" v-for="(item, index) in cart" :key="index">
         <div class="md-layout-item">{{ item.name }}</div>
         <div class="md-layout-item">
@@ -11,7 +11,7 @@
         </div>
         <div class="md-layout-item">{{ '$' + item.price }}</div>
         <div class="md-layout-item">
-          <md-button class="md-primary" @click="removeItem(index)">Remove</md-button>
+          <md-button class="md-primary" @click="removeItem(index, item.id)">Remove</md-button>
         </div>
       </div>
       <div class="md-layout" >
@@ -44,7 +44,7 @@ export default {
     },
     cartCount() {
       return this.StoreCart.length;
-    },
+    },    
     cart() {
       return this.$store.getters.StoreCart.map(cartitems => {
         return this.$store.getters.products.find(itemForSale => {
@@ -57,12 +57,13 @@ export default {
         return this.$store.getters.products.find(itemForSale => {
           return cartitems === itemForSale.id;
         })
-      }).reduce((a, b) => a + (b.price || 0), 0);
+      }).reduce((a, b) => a + (b.price || 0), 0);      
     }
   },
   methods: {
     removeItem(index) {
-      this.$store.dispatch("removeItem", index);
+      console.log(this.cart[index].id)   
+      this.$store.dispatch("removeItem", [index, this.cart[index].id]);   
     },
     showList() {
       var modal = document.getElementById("shoppingList");

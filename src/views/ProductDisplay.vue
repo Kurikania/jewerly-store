@@ -73,7 +73,9 @@ export default {
     },
     methods: {
       addItem(id) {
-            this.$store.dispatch("addItem", id);
+        if (this.$store.getters.products[id-1].inStock) {                
+          this.$store.dispatch("addItem", id);
+      }  
     }
   },
 }

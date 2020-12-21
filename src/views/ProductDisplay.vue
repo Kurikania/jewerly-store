@@ -38,7 +38,7 @@
                       <md-table-cell>{{detail.size}}</md-table-cell>
                       <md-table-cell>{{detail.weight}}</md-table-cell>
                       <md-table-cell>{{detail.metal}}</md-table-cell>
-                      <md-table-cell>{{detail.inStock}}</md-table-cell>
+                      <md-table-cell>{{detail.probe}}</md-table-cell>
                     </md-table-row>          
                 </md-table>
             </md-step>

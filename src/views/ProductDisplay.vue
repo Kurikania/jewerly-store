@@ -31,7 +31,7 @@
                       <md-table-head>Size</md-table-head>
                       <md-table-head>Weight</md-table-head>
                       <md-table-head>Material</md-table-head>
-                      <md-table-head>In stock</md-table-head>
+                      <md-table-head>Probe</md-table-head>
                     </md-table-row>
 
                     <md-table-row v-for="detail in product.details" :key="detail.size">            

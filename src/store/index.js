@@ -18,9 +18,9 @@ export default new Vuex.Store({
           "https://i.imgur.com/LIi5RFF.jpeg",
         ], 
         description: "Silver rings have a multitude of meanings and symbolism behind them. A single ring has that meaning and significance behind it.",        
-        details: [{size: 1, weight: 15, metal: "silver",inStock: 80,},
-                  {size: 2, weight: 18, metal: "silver",inStock: 85,},
-                  {size: 3, weight: 20, metal: "silver",inStock: 5,},
+        details: [{size: 1, weight: 15, metal: "silver",probe: 925,},
+                  {size: 2, weight: 18, metal: "silver",probe: 925,},
+                  {size: 3, weight: 20, metal: "silver",iprobe: 925,},
         ]
       },
 
@@ -37,9 +37,9 @@ export default new Vuex.Store({
         ],
         price: 500,        
         description: "Pure silver is very soft, making it a poor choice for an everyday ring, such as an engagement ring or wedding band. The addition of copper makes silver strong.",
-        details: [{size: 1, weight: 15, metal: "silver",inStock: 80,},
-        {size: 2, weight: 18, metal: "silver",inStock: 85,},
-        {size: 3, weight: 20, metal: "silver",inStock: 5,},
+        details: [{size: 1, weight: 15, metal: "silver",probe: 925,},
+        {size: 2, weight: 18, metal: "silver",probe: 925,},
+        {size: 3, weight: 20, metal: "silver",probe: 925,},
       ]
     },
     
@@ -55,9 +55,9 @@ export default new Vuex.Store({
       price: 600,
       inStock: 5,      
       description: "A necklace is an article of jewellery that is worn around the neck. Necklaces may have been one of the earliest types of adornment worn by humans.",
-      details: [{size: 1, weight: 15, metal: "silver",inStock: 2,},
-                  {size: 2, weight: 18, metal: "silver",inStock: 3,},
-                  {size: 3, weight: 20, metal: "silver",inStock: 5,},
+      details: [{size: 1, weight: 15, metal: "silver", probe: 925 },
+                  {size: 2, weight: 18, metal: "silver", probe: 925},
+                  {size: 3, weight: 20, metal: "silver", probe: 925},
         ]
       },
     ],
